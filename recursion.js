@@ -1,23 +1,26 @@
 // to test these problems you can run 'node recursion.js' in your terminal
 // Problem 1:
 
-let n = 1;
-while (n <= 10) {
-  console.log('While Loop', n);
-  n++;
-}
+// let n = 1;
+// while (n <= 10) {
+//   console.log('While Loop', n);
+//   n++;
+// }
 
 // write a recursive - function called countToTen that mimics the while loop above.
 // code here
 
 
 const countToTen = (counter) => {
-  if (counter === undefined) {
+  if (counter === undefined) { // Safety Net: if no argument is passed.
     counter = 0;
   };
-  if (counter < 10) {
+  if (counter > 10) { // Safety Net: if counter given > 10.
+    console.log(`already past 10 no need to count!`);
+  };
+  if (counter < 10) { // Count recursivelly.
     ++counter;
-    console.log(`${counter}`);
+    console.log(`Recursive Loop: ${counter}`);
     countToTen(counter);  
   };
 };
