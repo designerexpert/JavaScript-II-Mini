@@ -9,16 +9,20 @@
 
 // write a recursive - function called countToTen that mimics the while loop above.
 // code here
-const countToTen = () => {
-  for (let i = 0; i <= 10; i++) {
-    console.log('countToTen Loop', i);
+const countToTen = (x) => {
+  let counter = 10;  
+  while (counter < 0) {
+          --counter;      
+          countToTen(counter);
+           
   }
+     
 };
 
-countToTen();
+
 
 // when you code is ready, un-comment the next line and run the file
-// console.log(countToTen());
+console.log(countToTen());
 /* ================ Next Problem ================= */
 
 // Problem 2:
